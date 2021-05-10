@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Pdf from './pdf.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App (){
+  const defaultImg = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F337%2F337946.png&f=1&nofb=1'
+  const [pdf, setPdf] = useState(null)
+
+  const onFileChange = (e) => {
+    const reader = new FileReader()
+    reader.onload = () => {
+      if(reader.readyState === 2){
+        setPdf(reader.result)
+      }
+    }
+    reader.readAsDataURL(e.target.files[0])
+  }
+
+		return (
+			<div className = "page">
+				<div className="container">
+					<h1 className="heading">Upload Your Pitch Deck</h1>
+            <div className="img-holder">
+              {pdf
+                ? <Pdf file={pdf} />
+                : <img src={defaultImg} alt="" id="img" className="img" />
+              }
+  					</div>
+					<input type="file" name="image-upload" id="input" onChange={onFileChange} />
+					<div className="label">
+          <label className="image-upload" htmlFor="input">
+						<i className="material-icons">add_photo_alternate</i> UPLOAD
+
+					</label>
+          </div>
+				</div>
+			</div>
+		)
 }
-
-export default App;
