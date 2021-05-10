@@ -7,7 +7,7 @@ PDF Uploader & Viewer is built with Accessibility in mind. Currently rendering P
 It can also be customized to allow PDFs to be rendered as images thanks to the React-pdf package if necessary.
 
 
-Directions:
+## Directions
 
 clone repo
 
