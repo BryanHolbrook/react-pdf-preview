@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './App.css'
+import './app.css'
 import Pdf from './pdf.js'
 
 export default function App (){
@@ -16,24 +16,24 @@ export default function App (){
     reader.readAsDataURL(e.target.files[0])
   }
 
-		return (
-			<div className = "page">
-				<div className="container">
-					<h1 className="heading">Upload Your Pitch Deck</h1>
-            <div className="img-holder">
-              {pdf
-                ? <Pdf file={pdf} />
-                : <img src={defaultImg} alt="" id="img" className="img" />
-              }
-  					</div>
-					<input type="file" name="image-upload" id="input" onChange={onFileChange} />
-					<div className="label">
-          <label className="image-upload" htmlFor="input">
-						<i className="material-icons">add_photo_alternate</i> UPLOAD
+	return (
+		<div className = "page">
+			<div className="container">
+				<h1 className="heading">Upload Your Pitch Deck</h1>
+          <div className="img-holder">
+            {pdf
+              ? <Pdf file={pdf} />
+              : <img src={defaultImg} alt="" id="img" className="img" />
+            }
+					</div>
+				<input type="file" name="image-upload" id="input" onChange={onFileChange} />
+				<div className="label">
+        <label className="image-upload" htmlFor="input">
+					<i className="material-icons">add_photo_alternate</i> UPLOAD
 
-					</label>
-          </div>
-				</div>
+				</label>
+        </div>
 			</div>
-		)
+		</div>
+	)
 }
