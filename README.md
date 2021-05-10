@@ -10,6 +10,9 @@ It can also be customized to allow PDFs to be rendered as images thanks to the R
 Directions:
 
 clone repo
+
 ### `cd into project`
-### `npm install react-pdf`
+### `npm install`
 ### `npm start`
+
+Then open http://localhost:3000/ to see your app.
