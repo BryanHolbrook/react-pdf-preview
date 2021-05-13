@@ -18,8 +18,8 @@ export default function App() {
           </li>
         </ul>
       </nav>
-      <Route path= "/" exact component={LiveProfile} />
-      <Route path= "/edit" component={EditProfile} />
+      <Route path="/" exact component={LiveProfile} />
+      <Route path="/edit" component={EditProfile} />
     </Router>
   )
 }

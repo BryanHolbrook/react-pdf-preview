@@ -8,13 +8,13 @@ export default function LiveProfile() {
 
 
 	return (
-		<div className = "page">
+		<div className="page">
 			<div className="container">
 				<h1 className="heading">Invest In My Company</h1>
           <div className="img-holder">
             {file
               ? <Pdf file={file} />
-              : <img src={defaultImg} alt="" id="img" className="img" />
+              : <img src={defaultImg} alt="company profile photo" id="img" className="img" />
             }
 					</div>
 			    <div className="overview">
