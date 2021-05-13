@@ -8,18 +8,18 @@ export default function LiveProfile() {
 
 
 	return (
-		<div className="page">
-			<div className="container">
-				<h1 className="heading">Invest In My Company</h1>
-          <div className="img-holder">
+		<div className='page'>
+			<div className='container'>
+				<h1 className='heading'>Invest In My Company</h1>
+          <div className='img-holder'>
             {file
               ? <Pdf file={file} />
-              : <img src={defaultImg} alt="company profile photo" id="img" className="img" />
+              : <img src={defaultImg} alt='company profile photo' id='img' className='img' />
             }
 					</div>
-			    <div className="overview">
-            <h2 className="heading 2">Overview</h2>
-            <p className="body">As a former bootstrapper myself, I built the fund and partner with who I would have wanted to work with and that remains my North Star.</p>
+			    <div className='overview'>
+            <h2 className='heading 2'>Overview</h2>
+            <p className='body'>As a former bootstrapper myself, I built the fund and partner with who I would have wanted to work with and that remains my North Star.</p>
           </div>
 			</div>
 		</div>

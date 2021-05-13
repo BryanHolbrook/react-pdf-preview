@@ -18,19 +18,19 @@ export default function EditProfile() {
   }
 
 	return (
-		<div className="page">
-			<div className="container">
-				<h1 className="heading">Upload Your Pitch Deck</h1>
-          <div className="img-holder">
+		<div className='page'>
+			<div className='container'>
+				<h1 className='heading'>Upload Your Pitch Deck</h1>
+          <div className='img-holder'>
             {pdf
               ? <Pdf file={pdf} />
-              : <img src={defaultImg} alt="pdf upload icon" id="img" className="img" />
+              : <img src={defaultImg} alt='pdf upload icon' id='img' className='img' />
             }
 					</div>
-				<input type="file" name="image-upload" id="input" onChange={onFileChange} />
-				<div className="label">
-        <label className="image-upload" htmlFor="input">
-					<i className="material-icons">add_photo_alternate</i> UPLOAD
+				<input type='file' name='image-upload' id='input' onChange={onFileChange} />
+				<div className='label'>
+        <label className='image-upload' htmlFor='input'>
+					<i className='material-icons'>add_photo_alternate</i> UPLOAD
 
 				</label>
         </div>
