@@ -3,6 +3,47 @@
   padding: 0;
 } */
 
+
+ul {
+ list-style-type: none;
+ margin: auto;
+ padding: 1px;
+ overflow: hidden;
+ /* border: 1px solid #e7e7e8; */
+ background-color: #1a1a1a;
+ box-shadow: 0px 0px 30px rgb(0 0 0 / 30%);
+ position: fixed;
+ top: 0;
+ width: 100%;
+ margin-bottom: 20px;
+}
+
+li {
+ float: right;
+ border-right: 2px solid #e7e7e8;
+}
+
+/* Add a border to all( but not the last) list items */
+li:last-child {
+ border-right: none;
+}
+
+li a {
+ display: block;
+ color: #fff;
+ text-align: left;
+ padding: 15px 17px;
+ text-decoration: none;
+}
+
+/* Links will change color when hovered over */
+li a:hover {
+ /* background-color: #f4f5f6; */
+ text-decoration: underline;
+ text-underline-offset: 3px;
+}
+
+
 .page{
   object-fit: cover;
   /* background: linear-gradient( 130deg, #e74c3c 0, #78378c 100%); */
@@ -29,7 +70,7 @@
 }
 .heading{
   text-align: center;
-  padding-top: 1em;
+  padding-top: 2em;
   font-family: Montserrat, 'Segoe UI', Tahoma, Gotham SSm A,Gotham SSm B,Helvetica,Arial,sans-serif;;
   margin-top: 1rem;
   font-weight: bold;
@@ -99,11 +140,10 @@
   box-shadow: 0px 0px 30px rgb(0 0 0 / 30%);
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
-
 }
 
 p {
-  
+
   color: #1a1a1a;
   align-items: center;
   justify-content: center;
